@@ -3785,7 +3785,7 @@ section h3 {
 /* PRESIDENT PHOTO - ZOOM IN + MOVE DOWN */
 .president-message-image img {
     width: 100%;
-    height: 1%
+    height: 100%;
     object-fit: cover;
     object-position: 50% 55%;
     transform: scale(1.20) translateY(6%);
@@ -3816,3 +3816,314 @@ section h3 {
     transform: scale(1.10) !important;
     transform-origin: center center !important;
 }
+
+/* =========================================
+   FINAL PHONE / MOBILE POLISH
+   Desktop styles remain unchanged.
+========================================= */
+
+@media screen and (max-width: 650px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .nav-container {
+        padding: 10px 14px;
+    }
+
+    .nav-logo {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .nav-logo span {
+        font-weight: 400;
+    }
+
+    .menu-button {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        top: 60px;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .nav-links a {
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+
+    /* Hero */
+    header {
+        min-height: 540px;
+        padding: 88px 16px 52px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-logo {
+        width: min(92vw, 390px);
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        padding: 0 4px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-button {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    /* Main sections */
+    section {
+        margin: 20px 10px;
+        padding: 32px 18px;
+        border-radius: 18px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    /* Upcoming event: poster above, details below */
+    .event-card-with-poster {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        border-radius: 20px;
+    }
+
+    .event-poster-wrap {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .event-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        transform: none;
+    }
+
+    .event-card-with-poster .event-info {
+        padding: 28px 20px 30px;
+    }
+
+    .event-card h3 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .event-card p {
+        font-size: 15px;
+    }
+
+    .event-details {
+        padding: 15px 16px;
+    }
+
+    /* Our Mission: preserve the full group better on a narrow screen */
+    #about .mission-card {
+        margin-top: 24px;
+        border-radius: 18px;
+    }
+
+    #about .mission-copy {
+        padding: 26px 20px;
+    }
+
+    #about .mission-copy p {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #about .mission-image {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    #about .mission-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+        object-position: 42% 84%;
+        transform: scale(1.12);
+        transform-origin: center 75%;
+    }
+
+    /* Team */
+    .team-group {
+        margin-top: 38px;
+    }
+
+    .team-group-title {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .team-grid .team-card,
+    .leadership-grid .team-card,
+    .website-team-grid .team-card {
+        flex: 0 1 100%;
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team-card {
+        padding: 24px 18px;
+    }
+
+    .team-avatar {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 18px;
+    }
+
+    /* Keep the Hasan crop fix on mobile too */
+    .team-avatar img[src="hasan.jpg"] {
+        object-fit: cover !important;
+        object-position: 57% 20% !important;
+        transform: scale(1.10) !important;
+    }
+
+    /* Content cards */
+    .lupus-card,
+    .involved-card,
+    .contact-card,
+    .sponsor-card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .involved-card .involved-button {
+        width: 100%;
+        max-width: 290px;
+        min-height: 52px;
+        height: auto;
+        padding: 12px 16px;
+        white-space: normal;
+    }
+
+    /* President message */
+    #president-message {
+        padding: 32px 18px;
+    }
+
+    .president-message-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: 0;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .president-message-image {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+    }
+
+    .president-message-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+        object-position: 50% 78%;
+        transform: scale(1.08);
+        transform-origin: center center;
+    }
+
+    .president-message-text {
+        padding: 30px 22px;
+    }
+
+    .president-message-text h2 {
+        font-size: 28px;
+    }
+
+    /* Sponsor wall: two compact columns instead of 18 giant rows */
+    .confirmed-sponsors-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .confirmed-sponsors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .confirmed-sponsor-card {
+        min-height: 92px;
+        padding: 12px 10px;
+    }
+
+    .sponsor-logo {
+        width: 100%;
+        max-width: 125px;
+        height: 58px;
+        object-fit: contain;
+    }
+
+    .sponsor-logo[src="ingenium.jpg"],
+    .sponsor-logo[src="specsavers.jpg"],
+    .sponsor-logo[src="pureyoga.jpg"],
+    .sponsor-logo[src="ottawaink.jpg"],
+    .sponsor-logo[src="levelonegamehub.jpg"] {
+        max-width: 125px;
+        height: 60px;
+        transform: scale(1.30);
+    }
+
+    /* Footer / back to top */
+    #back-to-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+/* Very narrow phones */
+@media screen and (max-width: 360px) {
+    section {
+        margin-left: 8px;
+        margin-right: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .confirmed-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmed-sponsor-card {
+        min-height: 90px;
+    }
+}
+
+/* END FINAL PHONE / MOBILE POLISH */
