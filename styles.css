@@ -3808,3 +3808,11 @@ section h3 {
 .sponsor-logo[src="levelonegamehub.jpg"] {
     transform: scale(1.55);
 }
+
+/* FINAL HASAN PHOTO FIX */
+.team-avatar img[src="hasan.jpg"] {
+    object-fit: cover !important;
+    object-position: 57% 20% !important;
+    transform: scale(1.10) !important;
+    transform-origin: center center !important;
+}
