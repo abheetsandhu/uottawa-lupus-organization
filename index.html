@@ -12,12 +12,19 @@
 
     <meta
         name="description"
-        content="The uOttawa Lupus Organization raises awareness, supports education, and builds community around lupus initiatives at the University of Ottawa."
+        content="The uOttawa Lupus Organization raises awareness, supports education, and builds community around lupus initiatives at uOttawa."
     >
 
     <title>
         uOttawa Lupus Organization | UOLO
     </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <link
         rel="stylesheet"
@@ -79,22 +86,13 @@
 
     <div class="nav-container">
 
-        <a
-            href="#home"
-            class="nav-logo"
-        >
+<a href="#home" class="nav-logo">
+    <img src="logo no words (3).png" alt="UOLO Logo">
 
-            <img
-                src="logo no words (3).png"
-                alt="UOLO Logo"
-            >
-
-            <span>
-                UOLO
-            </span>
-
-        </a>
-
+    <span>
+        UOLO
+    </span>
+</a>
 
         <button
             class="menu-button"
@@ -121,7 +119,7 @@
             </a>
 
             <a href="#about">
-                About
+                Our Mission
             </a>
 
 	    <a href="#team">
@@ -161,11 +159,19 @@
 <section id="events" class="reveal">
 
     <h2>
-        Our Next Event
+        Upcoming Events
     </h2>
 
+    <div class="event-card event-card-with-poster">
 
-    <div class="event-card">
+        <div class="event-poster-wrap">
+            <img
+                src="poker-fundraiser-fr.png"
+                alt="French Poker Fundraiser event poster"
+                class="event-poster"
+                loading="lazy"
+            >
+        </div>
 
         <div class="event-info">
 
@@ -173,34 +179,23 @@
                 Upcoming Event
             </p>
 
-
             <h3>
-                Exit Lounge
+                Poker Fundraiser
             </h3>
 
-
-            <p>
-                <strong>Date:</strong>
-                October 2, 2026
+            <p class="event-collab">
+                Presented by the Gee Gee Poker Collective and the uOttawa Lupus Organization.
             </p>
 
+            <div class="event-details">
+                <p><strong>Date:</strong> October 25, 2026</p>
+                <p><strong>Time:</strong> From 2:00 PM</p>
+                <p><strong>Location:</strong> Morisset Hall, Room 205</p>
+                <p><strong>Entrance Fee:</strong> $5</p>
+            </div>
 
-            <p>
-                <strong>Time:</strong>
-                6:00 PM – 10:00 PM
-            </p>
-
-
-            <p>
-                <strong>Location:</strong>
-                Exit Lounge
-            </p>
-
-
-            <p>
-                Join the uOttawa Lupus Organization for an evening
-                of community, connection, and support for lupus
-                awareness initiatives.
+            <p class="event-highlight">
+                Open to everyone. All proceeds support Lupus Canada.
             </p>
 
         </div>
@@ -211,21 +206,37 @@
 
 
 
-<!-- ABOUT SECTION -->
+<!-- MISSION SECTION -->
 
 <section id="about" class="reveal">
 
     <h2>
-        About Us
+        Our Mission
     </h2>
 
-    <p>
-        The uOttawa Lupus Organization is a student-led organization
-        focused on raising awareness about lupus, educating students,
-        supporting community initiatives, and contributing to
-        organizations working to improve the lives of people affected
-        by lupus.
-    </p>
+    <div class="mission-card">
+
+        <div class="mission-copy">
+            <p>
+                The uOttawa Lupus Organization is dedicated to raising awareness
+                about lupus, supporting those affected by it, and educating our
+                community about this often invisible illness. Through advocacy,
+                collaboration, and research engagement, we strive to create a
+                compassionate and informed environment that empowers individuals
+                living with lupus and inspires action toward better understanding
+                and care.
+            </p>
+        </div>
+
+        <div class="mission-image">
+            <img
+                src="uolo-team-2026.jpg"
+                alt="uOttawa Lupus Organization executive team"
+                loading="lazy"
+            >
+        </div>
+
+    </div>
 
 </section>
 
@@ -248,13 +259,12 @@
         <p>
             Meet the students working behind the scenes to support
             lupus awareness, education, fundraising, events, outreach,
-            research, and community initiatives at the University of Ottawa.
+            research, and community initiatives at uOttawa.
         </p>
 
     </div>
 
-
-    <!-- LEADERSHIP -->
+<!-- LEADERSHIP -->
 
     <div class="team-group">
 
@@ -616,6 +626,35 @@
 
             </div>
 
+
+            <div class="team-card">
+
+                <div class="team-avatar">
+                    <img
+                        src="ryan.jpg"
+                        alt="Ryan Appolon"
+                        loading="lazy"
+                    >
+                </div>
+
+                <h4>
+                    Ryan Appolon
+                </h4>
+
+                <p class="team-role">
+                    Event Photographer
+                </p>
+
+                <p class="team-year">
+                    4th Year
+                </p>
+
+                <p class="team-program">
+                    Mechanical Engineering
+                </p>
+
+            </div>
+
         </div>
 
     </div>
@@ -823,33 +862,6 @@
             </div>
 
 
-            <div class="team-card">
-
-                <div class="team-avatar">
-                    <img
-                        src="ryan.jpg"
-                        alt="Ryan Appolon"
-                        loading="lazy"
-                    >
-                </div>
-
-                <h4>
-                    Ryan Appolon
-                </h4>
-
-                <p class="team-role">
-                    Event Photographer
-                </p>
-
-                <p class="team-year">
-                    4th Year
-                </p>
-
-                <p class="team-program">
-                    Mechanical Engineering
-                </p>
-
-            </div>
 
         </div>
 
@@ -985,8 +997,7 @@
                     Musa Arain
                 </h4>
 
-                <p class="team-role">
-                    VP Research
+                <p class="team-role">                    VP Research
                 </p>
 
                 <p class="team-year">
@@ -995,6 +1006,42 @@
 
                 <p class="team-program">
                     Biomedical Sciences
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GENERAL MEMBER COORDINATOR -->
+
+    <div class="team-group">
+
+        <h3 class="team-group-title">
+            General Member Coordinator
+        </h3>
+
+        <div class="team-grid website-team-grid">
+
+            <div class="team-card">
+
+                <div class="team-avatar">
+                    <img
+                        src="Ishan.jpg"
+                        alt="Ishan Duggal"
+                        loading="lazy"
+                    >
+                </div>
+
+                <h4>
+                    Ishan Duggal
+                </h4>
+
+                <p class="team-role">
+                    General Member Coordinator
                 </p>
 
             </div>
@@ -1242,7 +1289,7 @@
 
 
     <p>
-        Support the University of Ottawa Lupus Organization's
+        Support the uOttawa Lupus Organization's
         fundraising efforts in support of Lupus Canada.
     </p>
 
@@ -1260,8 +1307,60 @@
         rel="noopener noreferrer"
         class="donate-button"
     >
-        Donate Through CanadaHelps
+        Donate
     </a>
+
+</section>
+
+
+
+<!-- PRESIDENT MESSAGE SECTION -->
+
+<section id="president-message" class="reveal">
+
+    <div class="president-message-card">
+
+        <div class="president-message-image">
+            <img
+                src="Standingsiya.jpeg"
+                alt="Siya Duggal, President and Founder of the uOttawa Lupus Organization"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="president-message-text">
+
+<h2>
+                A Message From Our President
+            </h2>
+
+            <p>
+                If you’re living with lupus at uOttawa, I understand how
+                challenging it can be to balance your health and your academics.
+                I’ve experienced it myself and that’s why I founded the uOttawa
+                Lupus Organization.
+            </p>
+
+            <p>
+                UOLO was created to raise awareness about lupus, promote accurate
+                and evidence-based education, advocate for students affected by
+                autoimmune diseases, and foster research and meaningful community
+                engagement.
+            </p>
+
+            <p>
+                This organization is personal to me, but it’s built for our entire
+                community.
+            </p>
+
+            <p>
+                We’re here to increase understanding, create space for support,
+                and make sure no student feels alone navigating lupus.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1275,30 +1374,94 @@
         Our Sponsors & Partners
     </h2>
 
-
     <p>
         We are grateful to the organizations and businesses that
         support the uOttawa Lupus Organization and help us raise
         awareness, support events, and grow our impact.
     </p>
 
+    <h3 class="confirmed-sponsors-title">
+        Confirmed 2026 Sponsors
+    </h3>
 
-    <div class="sponsor-container">
 
+    <div class="confirmed-sponsors-grid">
 
-        <div class="sponsor-card">
-
-            <h3>
-                Current Sponsors
-            </h3>
-
-            <p>
-                Sponsor and partner information will be added
-                as collaborations are confirmed.
-            </p>
-
+        <div class="confirmed-sponsor-card">
+            <img src="Happygoat.jpg" alt="Happy Goat logo" class="sponsor-logo">
         </div>
 
+        <div class="confirmed-sponsor-card">
+            <img src="escaperoom.jpg" alt="Escape Room Ottawa logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="levelonegamehub.jpg" alt="Level One Game Pub logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="cafetehran.jpg" alt="Cafe Tehran logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="shoelessjoe.jpg" alt="Shoeless Joe's Kemptville logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="chipotle.jpg" alt="Chipotle logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="9round.jpg" alt="9Round logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="goodlife.jpg" alt="GoodLife Fitness logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="ingenium.jpg" alt="Ingenium Museums logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="orleansbowling.jpg" alt="Orleans Bowling logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="canadianwarmuseum.jpg" alt="Canadian War Museum logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="specsavers.jpg" alt="Specsavers logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="ottawaink.jpg" alt="Ottawa Ink logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="pureyoga.jpg" alt="Pure Yoga Ottawa logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="fratelli.jpg" alt="Fratelli Kanata logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="bridgehead.jpg" alt="Bridgehead logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="merrydairy.jpg" alt="The Merry Dairy logo" class="sponsor-logo">
+        </div>
+
+        <div class="confirmed-sponsor-card">
+            <img src="pinball.jpg" alt="House of TARG logo" class="sponsor-logo">
+        </div>
+
+    </div>
+
+    <div class="sponsor-container sponsor-actions">
 
         <div class="sponsor-card">
 
@@ -1319,7 +1482,6 @@
             </a>
 
         </div>
-
 
         <div class="sponsor-card">
 
@@ -1345,7 +1507,6 @@
     </div>
 
 </section>
-
 
 
 <!-- CONTACT SECTION -->
@@ -1430,19 +1591,6 @@
         </div>
 
     </div>
-
-
-    <div class="contact-email">
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:uottawalupusorganization@gmail.com">
-                uottawalupusorganization@gmail.com
-            </a>
-        </p>
-
-    </div>
-
 </section>
 
 
@@ -1479,6 +1627,16 @@
             TikTok
         </a>
 
+        <a
+            href="https://www.linkedin.com/company/university-of-ottawa-lupus-organization/home/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-button"
+        >
+            LinkedIn
+        </a>
+
+
     </div>
 
 </section>
@@ -1496,8 +1654,9 @@
             <h3>uOttawa Lupus Organization</h3>
 
             <p>
-                Raising awareness, supporting education, and building
-                community around lupus initiatives at the University of Ottawa.
+                The uOttawa Lupus Organization is a student-led community
+                dedicated to lupus awareness, education, advocacy, fundraising,
+                and creating meaningful support for those affected by lupus.
             </p>
 
         </div>
@@ -1509,7 +1668,7 @@
 
     <a href="#home">Home</a>
     <a href="#events">Events</a>
-    <a href="#about">About</a>
+    <a href="#about">Our Mission</a>
     <a href="#team">Team</a>
     <a href="#lupus">What Is Lupus?</a>
     <a href="#involved">Get Involved</a>
