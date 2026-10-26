@@ -4161,3 +4161,67 @@ section h3 {
     }
 }
 /* END FINAL MOBILE EVENT POSTER FIX */
+
+/* FINAL MOBILE VISIBILITY + EVENT HARD FIX */
+@media screen and (max-width: 650px) {
+
+    /* Large stacked sections can never hit the desktop reveal threshold.
+       Keep all phone sections visible. */
+    .reveal,
+    .reveal.visible {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        visibility: visible !important;
+    }
+
+    #team,
+    #team .team-heading,
+    #team .team-group,
+    #team .team-grid,
+    #team .team-card {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Force the event poster to size from the actual image, not a tall grid cell. */
+    #events .event-card-with-poster {
+        display: block !important;
+        grid-template-columns: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #events .event-poster-wrap {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        overflow: hidden !important;
+        line-height: 0 !important;
+    }
+
+    #events .event-poster {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        margin: 0 !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        transform: none !important;
+    }
+
+    #events .event-card-with-poster .event-info {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 26px 20px 30px !important;
+    }
+}
+/* END FINAL MOBILE VISIBILITY + EVENT HARD FIX */
