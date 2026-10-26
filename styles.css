@@ -4127,3 +4127,37 @@ section h3 {
 }
 
 /* END FINAL PHONE / MOBILE POLISH */
+
+/* FINAL MOBILE EVENT POSTER FIX */
+@media screen and (max-width: 650px) {
+    .event-card-with-poster {
+        display: block !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .event-poster-wrap {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: auto !important;
+        overflow: hidden !important;
+        background: #4b1e63 !important;
+    }
+
+    .event-poster {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        display: block !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        transform: none !important;
+    }
+
+    .event-card-with-poster .event-info {
+        padding: 26px 20px 30px !important;
+    }
+}
+/* END FINAL MOBILE EVENT POSTER FIX */
