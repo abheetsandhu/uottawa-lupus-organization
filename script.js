@@ -136,34 +136,34 @@ if ("IntersectionObserver" in window) {
 }
 
 /* =========================================
-   SCIENCE FRIDAYS CAROUSEL
+   SCIENCE FRIDAYS FEATURE SLIDER
 ========================================= */
 
-document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
-    const slides = Array.from(carousel.querySelectorAll("[data-slide]"));
-    const prevButton = carousel.querySelector("[data-carousel-prev]");
-    const nextButton = carousel.querySelector("[data-carousel-next]");
-    const currentLabel = carousel.querySelector("[data-carousel-current]");
-    const card = carousel.closest(".science-instagram-card");
-    const dots = card ? Array.from(card.querySelectorAll("[data-dot]")) : [];
+document.querySelectorAll("[data-science-feature-slider]").forEach(function (slider) {
+    const slides = Array.from(slider.querySelectorAll("[data-science-feature-slide]"));
+    const prevButton = slider.querySelector("[data-science-feature-prev]");
+    const nextButton = slider.querySelector("[data-science-feature-next]");
+    const currentLabel = slider.querySelector("[data-science-feature-current]");
+    const dots = Array.from(slider.querySelectorAll("[data-science-feature-dot]"));
 
     if (!slides.length) return;
 
     let currentIndex = 0;
     let touchStartX = 0;
-    let touchEndX = 0;
 
     function showSlide(index) {
         currentIndex = (index + slides.length) % slides.length;
 
         slides.forEach(function (slide, i) {
-            slide.classList.toggle("is-active", i === currentIndex);
-            slide.setAttribute("aria-hidden", i === currentIndex ? "false" : "true");
+            const active = i === currentIndex;
+            slide.classList.toggle("is-active", active);
+            slide.setAttribute("aria-hidden", active ? "false" : "true");
         });
 
         dots.forEach(function (dot, i) {
-            dot.classList.toggle("is-active", i === currentIndex);
-            dot.setAttribute("aria-current", i === currentIndex ? "true" : "false");
+            const active = i === currentIndex;
+            dot.classList.toggle("is-active", active);
+            dot.setAttribute("aria-current", active ? "true" : "false");
         });
 
         if (currentLabel) {
@@ -189,12 +189,12 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         });
     });
 
-    carousel.addEventListener("touchstart", function (event) {
+    slider.addEventListener("touchstart", function (event) {
         touchStartX = event.changedTouches[0].screenX;
     }, { passive: true });
 
-    carousel.addEventListener("touchend", function (event) {
-        touchEndX = event.changedTouches[0].screenX;
+    slider.addEventListener("touchend", function (event) {
+        const touchEndX = event.changedTouches[0].screenX;
         const distance = touchEndX - touchStartX;
 
         if (Math.abs(distance) < 45) return;
@@ -206,16 +206,11 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         }
     }, { passive: true });
 
-    carousel.setAttribute("tabindex", "0");
+    slider.setAttribute("tabindex", "0");
 
-    carousel.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowLeft") {
-            showSlide(currentIndex - 1);
-        }
-
-        if (event.key === "ArrowRight") {
-            showSlide(currentIndex + 1);
-        }
+    slider.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") showSlide(currentIndex - 1);
+        if (event.key === "ArrowRight") showSlide(currentIndex + 1);
     });
 
     showSlide(0);
