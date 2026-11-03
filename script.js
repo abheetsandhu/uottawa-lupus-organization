@@ -134,3 +134,89 @@ if ("IntersectionObserver" in window) {
     });
 
 }
+
+/* =========================================
+   SCIENCE FRIDAYS CAROUSEL
+========================================= */
+
+document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
+    const slides = Array.from(carousel.querySelectorAll("[data-slide]"));
+    const prevButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const currentLabel = carousel.querySelector("[data-carousel-current]");
+    const card = carousel.closest(".science-instagram-card");
+    const dots = card ? Array.from(card.querySelectorAll("[data-dot]")) : [];
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function showSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+
+        slides.forEach(function (slide, i) {
+            slide.classList.toggle("is-active", i === currentIndex);
+            slide.setAttribute("aria-hidden", i === currentIndex ? "false" : "true");
+        });
+
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle("is-active", i === currentIndex);
+            dot.setAttribute("aria-current", i === currentIndex ? "true" : "false");
+        });
+
+        if (currentLabel) {
+            currentLabel.textContent = String(currentIndex + 1);
+        }
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener("click", function () {
+            showSlide(currentIndex - 1);
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", function () {
+            showSlide(currentIndex + 1);
+        });
+    }
+
+    dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+            showSlide(index);
+        });
+    });
+
+    carousel.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener("touchend", function (event) {
+        touchEndX = event.changedTouches[0].screenX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 45) return;
+
+        if (distance < 0) {
+            showSlide(currentIndex + 1);
+        } else {
+            showSlide(currentIndex - 1);
+        }
+    }, { passive: true });
+
+    carousel.setAttribute("tabindex", "0");
+
+    carousel.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+            showSlide(currentIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showSlide(currentIndex + 1);
+        }
+    });
+
+    showSlide(0);
+});
