@@ -4653,3 +4653,63 @@ section h3 {
 }
 
 /* END SCIENCE FRIDAYS SECTION */
+
+/* SCIENCE FRIDAYS ARCHIVE DETAIL POLISH */
+
+.science-current-block {
+    margin-top: 28px;
+}
+
+.science-current-block .science-series-heading {
+    margin-bottom: 0;
+}
+
+.science-week-grid-detailed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.science-week-card-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.science-detail-group {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(91, 37, 128, 0.10);
+}
+
+.science-detail-label {
+    margin: 0 0 8px;
+    color: #4b1e63;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.science-focus-group {
+    margin-top: 16px;
+    padding: 14px 14px 12px;
+    border-top: none;
+    border-radius: 12px;
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.science-focus-group .science-detail-label {
+    color: #8a6d16;
+}
+
+.science-focus-group ul {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 760px) {
+    .science-week-grid-detailed {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* END SCIENCE FRIDAYS ARCHIVE DETAIL POLISH */
