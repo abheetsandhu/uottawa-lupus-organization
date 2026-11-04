@@ -215,3 +215,51 @@ document.querySelectorAll("[data-science-feature-slider]").forEach(function (sli
 
     showSlide(0);
 });
+
+
+/* =========================================
+   PREVIOUS SCIENCE FRIDAYS MONTH SLIDERS
+========================================= */
+
+document.querySelectorAll("[data-archive-slider]").forEach(function (slider) {
+    const slides = Array.from(slider.querySelectorAll("[data-archive-slide]"));
+    const prev = slider.querySelector("[data-archive-prev]");
+    const next = slider.querySelector("[data-archive-next]");
+    const current = slider.querySelector("[data-archive-current]");
+    const dots = Array.from(slider.querySelectorAll("[data-archive-dot]"));
+    let index = 0;
+    let startX = 0;
+
+    function show(i) {
+        index = (i + slides.length) % slides.length;
+
+        slides.forEach(function (slide, j) {
+            slide.classList.toggle("is-active", j === index);
+        });
+
+        dots.forEach(function (dot, j) {
+            dot.classList.toggle("is-active", j === index);
+        });
+
+        if (current) current.textContent = String(index + 1);
+    }
+
+    if (prev) prev.addEventListener("click", function () { show(index - 1); });
+    if (next) next.addEventListener("click", function () { show(index + 1); });
+
+    dots.forEach(function (dot, j) {
+        dot.addEventListener("click", function () { show(j); });
+    });
+
+    slider.addEventListener("touchstart", function (e) {
+        startX = e.changedTouches[0].screenX;
+    }, {passive:true});
+
+    slider.addEventListener("touchend", function (e) {
+        const diff = e.changedTouches[0].screenX - startX;
+        if (Math.abs(diff) < 45) return;
+        show(diff < 0 ? index + 1 : index - 1);
+    }, {passive:true});
+
+    show(0);
+});
