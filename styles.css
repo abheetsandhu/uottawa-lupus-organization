@@ -5766,3 +5766,206 @@ section h3 {
 .science-emoji-caption {position:absolute;bottom:-11%;left:50%;transform:translateX(-50%);padding:10px 22px;max-width:95%;white-space:nowrap;border-radius:999px;background:#f3e5fa;color:#4b236c;font-size:15px;font-weight:700;box-shadow:0 7px 25px #210d3b26;}
 @media(max-width:900px){.science-emoji-visual{min-height:360px}.science-emoji-scene{width:min(68%,290px)}.science-emoji-main{font-size:125px}.science-emoji-orbit{width:72px;height:72px;font-size:43px}}
 @media(max-width:600px){.science-emoji-visual{min-height:310px}.science-emoji-scene{width:min(67%,245px)}.science-emoji-main{font-size:105px}.science-emoji-orbit{width:61px;height:61px;font-size:37px}.science-emoji-caption{font-size:12px;padding:7px 13px}}
+
+
+/* PREVIOUS SCIENCE FRIDAYS MONTH SLIDERS */
+
+.science-archive-sliders {
+    display: grid;
+    gap: 34px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.archive-month-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(91,37,128,.13);
+    background: #fff;
+    box-shadow: 0 18px 46px rgba(62,26,78,.10);
+}
+
+.archive-month-header {
+    padding: 24px 28px 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(91,37,128,.08);
+    background: linear-gradient(145deg,#fff,#faf6fc);
+}
+
+.archive-month-header h4 {
+    margin: 2px 0 0;
+    color: #4b1e63;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.archive-slide-count {
+    flex: 0 0 auto;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #f1e5f7;
+    color: #5d2d78;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.archive-slider-viewport {
+    position: relative;
+}
+
+.archive-week-slide {
+    display: none;
+    grid-template-columns: 280px 1fr;
+    min-height: 520px;
+    background: #fff;
+}
+
+.archive-week-slide.is-active {
+    display: grid;
+}
+
+.archive-week-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 34px;
+    background:
+        radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 30%),
+        repeating-linear-gradient(-8deg,rgba(255,255,255,.035) 0 10px,transparent 10px 24px),
+        linear-gradient(145deg,#4d2865,#724691);
+}
+
+.archive-week-emoji {
+    width: 190px;
+    height: 190px;
+    border-radius: 42px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.22);
+    box-shadow: 0 18px 38px rgba(26,10,40,.18);
+    font-size: 110px;
+    line-height: 1;
+}
+
+.archive-week-copy {
+    padding: 40px 54px 48px;
+}
+
+.archive-week-copy h5 {
+    margin: 0 0 22px;
+    color: #4b1e63;
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.archive-info-block {
+    margin-top: 18px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: #faf7fc;
+    border: 1px solid rgba(91,37,128,.09);
+}
+
+.archive-focus-block {
+    background: rgba(212,175,55,.08);
+}
+
+.archive-info-block ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.archive-info-block li {
+    margin-bottom: 8px;
+    color: #5f5365;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.archive-slider-arrow {
+    position: absolute;
+    z-index: 10;
+    top: 58%;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,.96);
+    color: #4b1e63;
+    box-shadow: 0 7px 22px rgba(35,17,43,.18);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.archive-slider-prev { left: 12px; }
+.archive-slider-next { right: 12px; }
+
+.archive-slider-dots {
+    padding: 15px 18px 18px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    background: #fff;
+}
+
+.archive-slider-dots button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #d2c6d8;
+    cursor: pointer;
+}
+
+.archive-slider-dots button.is-active {
+    background: #6b3291;
+    transform: scale(1.18);
+}
+
+@media (max-width: 780px) {
+    .archive-week-slide,
+    .archive-week-slide.is-active {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-week-visual {
+        min-height: 280px;
+        padding: 24px;
+    }
+
+    .archive-week-emoji {
+        width: 150px;
+        height: 150px;
+        font-size: 88px;
+    }
+
+    .archive-week-copy {
+        padding: 32px 26px 44px;
+    }
+
+    .archive-week-copy h5 {
+        font-size: 25px;
+    }
+
+    .archive-month-header {
+        padding: 20px 20px 16px;
+    }
+
+    .archive-month-header h4 {
+        font-size: 20px;
+    }
+
+    .archive-slider-arrow {
+        top: 38%;
+    }
+}
+
+/* END PREVIOUS SCIENCE FRIDAYS MONTH SLIDERS */
