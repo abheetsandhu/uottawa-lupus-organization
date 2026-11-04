@@ -5295,3 +5295,336 @@ section h3 {
 }
 
 /* END CUTANEOUS LUPUS SLIDER POLISH */
+
+/* SCIENCE FRIDAYS LARGE PRESENTATION OVERRIDE */
+
+#science-fridays {
+    max-width: 1320px;
+}
+
+.science-feature-slider {
+    max-width: 1240px;
+    margin-top: 48px;
+    border-radius: 30px;
+}
+
+.science-feature-viewport {
+    min-height: 820px;
+}
+
+.science-feature-slide {
+    min-height: 820px;
+    grid-template-columns: minmax(440px, 0.95fr) minmax(0, 1.05fr);
+}
+
+.science-feature-visual {
+    min-height: 820px;
+    padding: 52px;
+}
+
+.science-skin-cover-art,
+.science-skin-illustration {
+    width: min(94%, 560px);
+    padding: 32px;
+    border-radius: 36px;
+}
+
+.science-feature-copy {
+    padding: 72px 70px 82px;
+}
+
+.science-feature-eyebrow {
+    margin-bottom: 14px;
+    font-size: 14px;
+    letter-spacing: 1.7px;
+}
+
+.science-feature-copy h3 {
+    margin-bottom: 22px;
+    font-size: clamp(40px, 4vw, 58px);
+    line-height: 1.06;
+}
+
+.science-feature-lead {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.science-feature-summary-grid {
+    gap: 16px;
+}
+
+.science-feature-summary-grid > div {
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 20px;
+}
+
+.science-feature-summary-grid span {
+    width: 44px;
+    height: 44px;
+    font-size: 13px;
+}
+
+.science-feature-summary-grid p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.science-feature-info-card {
+    padding: 26px 28px;
+    border-radius: 22px;
+}
+
+.science-feature-info-card h4 {
+    margin-bottom: 14px;
+    font-size: 21px;
+}
+
+.science-feature-info-card p,
+.science-feature-info-card li {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.science-feature-info-card li {
+    margin-bottom: 10px;
+}
+
+.science-feature-focus-list {
+    gap: 17px;
+}
+
+.science-feature-focus-list > div {
+    grid-template-columns: 60px 1fr;
+    gap: 18px;
+    padding: 20px 22px;
+    border-radius: 22px;
+}
+
+.science-focus-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.science-feature-focus-list h4 {
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+.science-feature-focus-list p {
+    font-size: 16px;
+    line-height: 1.58;
+}
+
+.science-feature-takeaways {
+    gap: 18px;
+}
+
+.science-feature-takeaways > div {
+    padding: 21px 22px;
+    border-radius: 22px;
+}
+
+.science-feature-takeaways strong {
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+.science-feature-takeaways p {
+    font-size: 16px;
+    line-height: 1.58;
+}
+
+.science-feature-note {
+    margin-top: 26px;
+    padding-left: 18px;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.science-feature-arrow {
+    width: 54px;
+    height: 54px;
+    font-size: 39px;
+}
+
+.science-feature-prev {
+    left: 18px;
+}
+
+.science-feature-next {
+    right: 18px;
+}
+
+.science-feature-footer {
+    min-height: 64px;
+    padding: 0 26px;
+}
+
+.science-feature-dots {
+    gap: 9px;
+}
+
+.science-feature-dots button {
+    width: 10px;
+    height: 10px;
+}
+
+.science-feature-count {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+    .science-feature-slider {
+        max-width: 940px;
+    }
+
+    .science-feature-viewport {
+        min-height: 1120px;
+    }
+
+    .science-feature-slide {
+        min-height: 1120px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 440px 1fr;
+    }
+
+    .science-feature-visual {
+        min-height: 440px;
+        padding: 34px;
+    }
+
+    .science-skin-cover-art,
+    .science-skin-illustration {
+        width: min(64%, 430px);
+        padding: 22px;
+    }
+
+    .science-feature-copy {
+        padding: 48px 52px 70px;
+    }
+
+    .science-feature-copy h3 {
+        font-size: 44px;
+    }
+
+    .science-feature-lead {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #science-fridays {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .science-feature-slider {
+        width: 100%;
+        margin-top: 34px;
+        border-radius: 20px;
+    }
+
+    .science-feature-viewport {
+        min-height: 1180px;
+    }
+
+    .science-feature-slide {
+        min-height: 1180px;
+        grid-template-rows: 360px 1fr;
+    }
+
+    .science-feature-visual {
+        min-height: 360px;
+        padding: 22px;
+    }
+
+    .science-skin-cover-art,
+    .science-skin-illustration {
+        width: min(82%, 340px);
+        padding: 18px;
+        border-radius: 26px;
+    }
+
+    .science-feature-copy {
+        padding: 38px 28px 64px;
+        overflow: visible;
+        justify-content: flex-start;
+    }
+
+    .science-feature-eyebrow {
+        font-size: 12px;
+    }
+
+    .science-feature-copy h3 {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .science-feature-lead {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .science-feature-summary-grid > div {
+        grid-template-columns: 46px 1fr;
+        padding: 16px 17px;
+    }
+
+    .science-feature-summary-grid p,
+    .science-feature-info-card p,
+    .science-feature-info-card li,
+    .science-feature-focus-list p,
+    .science-feature-takeaways p,
+    .science-feature-note {
+        font-size: 15.5px;
+    }
+
+    .science-feature-info-card {
+        padding: 22px 20px;
+    }
+
+    .science-feature-info-card h4,
+    .science-feature-focus-list h4,
+    .science-feature-takeaways strong {
+        font-size: 18px;
+    }
+
+    .science-feature-focus-list > div {
+        grid-template-columns: 50px 1fr;
+        padding: 17px 16px;
+    }
+
+    .science-focus-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .science-feature-takeaways > div {
+        padding: 18px 17px;
+    }
+
+    .science-feature-arrow {
+        width: 46px;
+        height: 46px;
+        font-size: 34px;
+    }
+
+    .science-feature-prev {
+        left: 10px;
+    }
+
+    .science-feature-next {
+        right: 10px;
+    }
+
+    .science-feature-footer {
+        min-height: 58px;
+    }
+}
+
+/* END SCIENCE FRIDAYS LARGE PRESENTATION OVERRIDE */
