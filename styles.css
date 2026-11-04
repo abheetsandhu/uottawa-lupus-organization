@@ -5628,3 +5628,93 @@ section h3 {
 }
 
 /* END SCIENCE FRIDAYS LARGE PRESENTATION OVERRIDE */
+
+/* SCIENCE FRIDAYS NATURAL HEIGHT FIX */
+
+/* Let the active slide determine the carousel height instead of clipping
+   every slide into one fixed viewport. */
+.science-feature-viewport {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.science-feature-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    min-height: 820px !important;
+    height: auto !important;
+}
+
+.science-feature-slide.is-active {
+    position: relative !important;
+    inset: auto !important;
+    min-height: 820px !important;
+    height: auto !important;
+}
+
+.science-feature-visual {
+    min-height: 820px !important;
+    height: 100% !important;
+}
+
+.science-feature-copy {
+    height: auto !important;
+    overflow: visible !important;
+    justify-content: center !important;
+}
+
+/* Give the detailed cards more room so text does not feel compressed. */
+.science-feature-focus-list,
+.science-feature-takeaways {
+    margin-top: 8px;
+}
+
+.science-feature-focus-list > div,
+.science-feature-takeaways > div,
+.science-feature-info-card {
+    flex-shrink: 0;
+}
+
+/* Keep arrows vertically centred on the currently visible slide. */
+.science-feature-arrow {
+    top: 50% !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .science-feature-slide,
+    .science-feature-slide.is-active {
+        min-height: 0 !important;
+        grid-template-rows: 440px auto !important;
+    }
+
+    .science-feature-visual {
+        min-height: 440px !important;
+        height: 440px !important;
+    }
+
+    .science-feature-copy {
+        min-height: 620px;
+        justify-content: flex-start !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .science-feature-slide,
+    .science-feature-slide.is-active {
+        min-height: 0 !important;
+        grid-template-rows: 360px auto !important;
+    }
+
+    .science-feature-visual {
+        min-height: 360px !important;
+        height: 360px !important;
+    }
+
+    .science-feature-copy {
+        min-height: 0;
+        padding-bottom: 72px !important;
+    }
+}
+
+/* END SCIENCE FRIDAYS NATURAL HEIGHT FIX */
