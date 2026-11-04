@@ -5204,3 +5204,94 @@ section h3 {
 }
 
 /* END SCIENCE FRIDAYS FEATURE SLIDER */
+
+/* CUTANEOUS LUPUS SLIDER POLISH */
+
+.science-skin-cover,
+.science-feature-visual {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(237, 204, 93, 0.13), transparent 25%),
+        repeating-linear-gradient(-8deg, rgba(255,255,255,0.035) 0 10px, transparent 10px 24px),
+        linear-gradient(145deg, #4d2865, #724691);
+}
+
+.science-skin-cover-art,
+.science-skin-illustration {
+    width: min(88%, 430px);
+    padding: 24px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.17);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.science-feature-info-card p {
+    margin: 0;
+    color: #5f5365;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.science-feature-viewport {
+    min-height: 690px;
+}
+
+.science-feature-slide,
+.science-feature-visual {
+    min-height: 690px;
+}
+
+@media screen and (max-width: 850px) {
+    .science-feature-viewport {
+        min-height: 940px;
+    }
+
+    .science-feature-slide {
+        min-height: 940px;
+        grid-template-rows: 340px 1fr;
+    }
+
+    .science-feature-visual {
+        min-height: 340px;
+    }
+
+    .science-skin-cover-art,
+    .science-skin-illustration {
+        width: min(70%, 340px);
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .science-feature-viewport {
+        min-height: 980px;
+    }
+
+    .science-feature-slide {
+        min-height: 980px;
+        grid-template-rows: 305px 1fr;
+    }
+
+    .science-feature-visual {
+        min-height: 305px;
+    }
+
+    .science-feature-copy {
+        overflow-y: auto;
+    }
+
+    .science-feature-copy h3 {
+        font-size: 28px;
+    }
+
+    .science-feature-focus-list {
+        gap: 10px;
+    }
+
+    .science-feature-focus-list > div,
+    .science-feature-takeaways > div {
+        padding: 12px 13px;
+    }
+}
+
+/* END CUTANEOUS LUPUS SLIDER POLISH */
