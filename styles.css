@@ -6211,3 +6211,255 @@ section h3 {
 }
 
 /* END SCIENCE FRIDAYS REAL PHOTO OVERRIDE */
+
+
+/* FINAL SCIENCE FRIDAYS AUDIENCE LAYOUT */
+
+/* Main/current-week slider */
+.science-feature-slider {
+    max-width: 1240px !important;
+    border-radius: 30px !important;
+    overflow: hidden !important;
+}
+
+.science-feature-slide,
+.science-feature-slide.is-active {
+    grid-template-columns: minmax(400px, 44%) minmax(0, 56%) !important;
+}
+
+.science-photo-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    min-height: 650px !important;
+    padding: 26px !important;
+    background:
+      radial-gradient(circle at 12% 12%, rgba(255,255,255,.10), transparent 31%),
+      linear-gradient(145deg,#3d1b52 0%,#59306f 55%,#70458a 100%) !important;
+    overflow: hidden !important;
+}
+
+/* no white frame around any photo */
+.science-photo-card {
+    display: none !important;
+    width: min(94%, 560px) !important;
+    height: 560px !important;
+    flex: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 24px !important;
+    background: transparent !important;
+    box-shadow: 0 18px 40px rgba(24,8,35,.24) !important;
+    overflow: hidden !important;
+}
+
+.science-photo-card:first-child {
+    display: flex !important;
+}
+
+.science-topic-photo,
+.science-topic-photo.contain {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 24px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Clinical images should not lose important edges */
+.science-feature-slide:nth-of-type(3) .science-topic-photo,
+.science-feature-slide:nth-of-type(4) .science-topic-photo,
+.science-feature-slide:nth-of-type(5) .science-topic-photo {
+    object-fit: contain !important;
+    background: rgba(255,255,255,.055) !important;
+}
+
+/* Two images only when both add useful information:
+   slide 6 = scarring/hair loss
+   slide 7 = diagnosis
+   Stack them top + bottom. */
+.science-feature-slide:nth-of-type(6) .science-photo-card,
+.science-feature-slide:nth-of-type(7) .science-photo-card {
+    display: flex !important;
+    width: min(94%, 560px) !important;
+    height: 270px !important;
+}
+
+.science-feature-slide:nth-of-type(6) .science-topic-photo,
+.science-feature-slide:nth-of-type(7) .science-topic-photo {
+    border-radius: 20px !important;
+}
+
+.science-feature-copy {
+    padding: 52px 56px !important;
+}
+
+/* Previous weeks */
+.science-archive-sliders {
+    max-width: 1180px !important;
+}
+
+.archive-week-slide,
+.archive-week-slide.is-active {
+    grid-template-columns: minmax(340px, 40%) minmax(0,60%) !important;
+}
+
+.archive-week-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    min-height: 470px !important;
+    padding: 22px !important;
+    background:
+      radial-gradient(circle at 12% 10%,rgba(255,255,255,.09),transparent 30%),
+      linear-gradient(145deg,#422057,#684081) !important;
+    overflow: hidden !important;
+}
+
+.archive-photo-card {
+    display: none !important;
+    width: min(92%, 470px) !important;
+    height: 410px !important;
+    flex: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 21px !important;
+    background: transparent !important;
+    box-shadow: 0 15px 34px rgba(25,8,35,.23) !important;
+    overflow: hidden !important;
+}
+
+.archive-photo-card:first-child {
+    display: flex !important;
+}
+
+.archive-week-photo {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 21px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* October 23 blood-clot slide benefits from two different lab views */
+[data-archive-slider="october"] .archive-week-slide:nth-of-type(4) .archive-photo-card {
+    display: flex !important;
+    width: min(92%, 470px) !important;
+    height: 195px !important;
+}
+
+[data-archive-slider="october"] .archive-week-slide:nth-of-type(4) .archive-week-photo {
+    border-radius: 17px !important;
+}
+
+.archive-week-copy {
+    padding: 40px 46px 46px !important;
+}
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+    .science-feature-slide,
+    .science-feature-slide.is-active,
+    .archive-week-slide,
+    .archive-week-slide.is-active {
+        grid-template-columns: 1fr !important;
+    }
+
+    .science-photo-visual {
+        min-height: 430px !important;
+        padding: 20px !important;
+    }
+
+    .science-photo-card {
+        width: min(88%, 520px) !important;
+        height: 390px !important;
+    }
+
+    .science-feature-slide:nth-of-type(6) .science-photo-card,
+    .science-feature-slide:nth-of-type(7) .science-photo-card {
+        width: min(88%, 520px) !important;
+        height: 185px !important;
+    }
+
+    .archive-week-visual {
+        min-height: 340px !important;
+        padding: 18px !important;
+    }
+
+    .archive-photo-card {
+        width: min(86%, 440px) !important;
+        height: 300px !important;
+    }
+
+    [data-archive-slider="october"] .archive-week-slide:nth-of-type(4) .archive-photo-card {
+        width: min(86%, 440px) !important;
+        height: 140px !important;
+    }
+}
+
+/* Phone: one strong image only */
+@media screen and (max-width: 650px) {
+    .science-photo-card:nth-child(2),
+    .archive-photo-card:nth-child(2) {
+        display: none !important;
+    }
+
+    .science-photo-visual {
+        min-height: 300px !important;
+        padding: 14px !important;
+    }
+
+    .science-photo-card,
+    .science-feature-slide:nth-of-type(6) .science-photo-card:first-child,
+    .science-feature-slide:nth-of-type(7) .science-photo-card:first-child {
+        display: flex !important;
+        width: min(92%, 370px) !important;
+        height: 265px !important;
+        border-radius: 18px !important;
+    }
+
+    .science-topic-photo,
+    .science-topic-photo.contain {
+        border-radius: 18px !important;
+    }
+
+    .archive-week-visual {
+        min-height: 270px !important;
+        padding: 12px !important;
+    }
+
+    .archive-photo-card,
+    [data-archive-slider="october"] .archive-week-slide:nth-of-type(4) .archive-photo-card:first-child {
+        display: flex !important;
+        width: min(92%, 350px) !important;
+        height: 235px !important;
+        border-radius: 16px !important;
+    }
+
+    .archive-week-photo {
+        border-radius: 16px !important;
+    }
+
+    .science-feature-copy,
+    .archive-week-copy {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+/* END FINAL SCIENCE FRIDAYS AUDIENCE LAYOUT */
