@@ -1,0 +1,209 @@
+/* Science Fridays slide layout repair.
+   Load AFTER the existing stylesheet, or paste at its very bottom.
+   Works with the existing data-science-feature-slider JavaScript.
+   Scoped specificity and !important deliberately override legacy overrides.
+*/
+[data-science-feature-slider].science-feature-slider {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 1120px !important;
+    border-radius: 24px !important;
+    background: #fff !important;
+    box-shadow: 0 14px 42px rgba(58,25,77,.09) !important;
+}
+[data-science-feature-slider] .science-feature-viewport {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+[data-science-feature-slider] .science-feature-slide {
+    display: none !important;
+    position: relative !important;
+    inset: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    transform: none !important;
+    transition: none !important;
+}
+[data-science-feature-slider] .science-feature-slide.is-active {
+    display: grid !important;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) !important;
+    align-items: start !important;
+    gap: 32px !important;
+    padding: 36px !important;
+    opacity: 1 !important;
+    background: #fff !important;
+}
+[data-science-feature-slider].science-feature-slider :is(.science-feature-visual, .science-photo-visual) {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+[data-science-feature-slider].science-feature-slider .science-photo-card {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: none !important;
+    transform: none !important;
+    border: 0 !important;
+    border-radius: 16px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+/* Intrinsic image height removes letterboxing and preserves clinical detail.
+   Existing rules still choose which slides show one or two images. */
+[data-science-feature-slider].science-feature-slider .science-topic-photo {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    transform: none !important;
+    border-radius: 16px !important;
+    background: transparent !important;
+}
+[data-science-feature-slider] .science-feature-copy {
+    min-width: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    justify-content: flex-start !important;
+    overflow-wrap: break-word;
+}
+[data-science-feature-slider] .science-feature-eyebrow {
+    font-size: 12px !important;
+    letter-spacing: 1.6px !important;
+    color: #8a6519 !important;
+    margin: 0 0 12px !important;
+}
+[data-science-feature-slider] .science-feature-copy h3 {
+    font-size: clamp(28px, 3vw, 36px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -.7px !important;
+    margin: 0 0 16px !important;
+    color: #422052 !important;
+}
+[data-science-feature-slider] .science-feature-lead {
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 0 0 20px !important;
+}
+[data-science-feature-slider] :is(.science-feature-info-card, .science-feature-takeaways > div, .science-feature-focus-list > div, .science-feature-summary-grid > div) {
+    padding: 14px 0 !important;
+    border: 0 !important;
+    border-top: 1px solid #e9e0ee !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+[data-science-feature-slider] :is(.science-feature-takeaways, .science-feature-focus-list, .science-feature-summary-grid) {
+    gap: 0 !important;
+    margin-top: 0 !important;
+}
+[data-science-feature-slider] :is(.science-feature-info-card h4, .science-feature-focus-list h4, .science-feature-takeaways strong) {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    margin: 0 0 7px !important;
+}
+[data-science-feature-slider] :is(.science-feature-info-card p, .science-feature-info-card li, .science-feature-focus-list p, .science-feature-takeaways p, .science-feature-summary-grid p) {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+/* Both arrow buttons are positioned in the footer band, clear of content. */
+[data-science-feature-slider] .science-feature-footer {
+    position: static !important;
+    min-height: 76px !important;
+    padding: 14px 80px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px 20px !important;
+}
+[data-science-feature-slider] .science-feature-arrow {
+    top: auto !important;
+    bottom: 16px !important;
+    transform: none !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 28px !important;
+    background: #f5eff8 !important;
+    box-shadow: none !important;
+    border: 1px solid #e6dced !important;
+}
+[data-science-feature-slider] .science-feature-prev { left: 20px !important; }
+[data-science-feature-slider] .science-feature-next { right: 20px !important; }
+[data-science-feature-slider] .science-feature-dots {
+    gap: 0 !important;
+    flex-wrap: wrap !important;
+}
+[data-science-feature-slider] .science-feature-dots button {
+    width: 22px !important;
+    height: 28px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    background: radial-gradient(circle, #cec1d5 0 4px, transparent 4.5px) !important;
+}
+[data-science-feature-slider] .science-feature-dots button.is-active {
+    background: radial-gradient(circle, #673284 0 5px, transparent 5.5px) !important;
+}
+[data-science-feature-slider] button:focus-visible {
+    outline: 3px solid #8a6519;
+    outline-offset: 3px;
+}
+@media (max-width: 760px) {
+    [data-science-feature-slider] .science-feature-slide.is-active {
+        grid-template-columns: minmax(0, 1fr) !important;
+        padding: 24px !important;
+        gap: 24px !important;
+    }
+    [data-science-feature-slider].science-feature-slider :is(.science-feature-visual, .science-photo-visual) {
+        max-width: 440px !important;
+        justify-self: center !important;
+    }
+    [data-science-feature-slider] .science-feature-copy h3 {
+        font-size: 28px !important;
+    }
+    [data-science-feature-slider] .science-feature-footer {
+        padding-left: 66px !important;
+        padding-right: 66px !important;
+        gap: 0 12px !important;
+    }
+    [data-science-feature-slider] .science-feature-prev { left: 12px !important; }
+    [data-science-feature-slider] .science-feature-next { right: 12px !important; }
+}
+
+/* Keep the subtype name primary and its description secondary. */
+[data-science-feature-slider] .science-feature-subtitle {
+    display: block;
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #786780;
+}
