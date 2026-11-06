@@ -5719,43 +5719,6 @@ section h3 {
 
 /* END SCIENCE FRIDAYS NATURAL HEIGHT FIX */
 
-/* REAL CANVA SCIENCE FRIDAY ART */
-
-.science-feature-visual {
-    overflow: hidden;
-}
-
-.science-canva-art {
-    width: min(92%, 560px);
-    max-width: 560px;
-    max-height: 660px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    border-radius: 26px;
-    filter: drop-shadow(0 18px 30px rgba(32, 15, 43, 0.22));
-}
-
-@media screen and (max-width: 1000px) {
-    .science-canva-art {
-        width: min(74%, 440px);
-        max-width: 440px;
-        max-height: 390px;
-        border-radius: 22px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .science-canva-art {
-        width: min(88%, 350px);
-        max-width: 350px;
-        max-height: 315px;
-        border-radius: 18px;
-    }
-}
-
-/* END REAL CANVA SCIENCE FRIDAY ART */
-
 /* Science Fridays: illustrated emoji scenes matching each topic */
 .science-emoji-visual { display:flex; align-items:center; justify-content:center; min-height:560px; overflow:hidden; }
 .science-emoji-scene { position:relative; display:flex; align-items:center; justify-content:center; width:min(85%,440px); aspect-ratio:1; border-radius:35%; background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.24),rgba(255,255,255,.06) 62%,rgba(255,255,255,.02)); border:2px solid rgba(255,255,255,.2); box-shadow:0 22px 55px rgba(29,9,52,.18),inset 0 0 60px rgba(255,255,255,.08); }
