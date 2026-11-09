@@ -4239,7 +4239,7 @@ section h3 {
 
 .science-fridays-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 34px;
     align-items: stretch;
 }
@@ -4248,17 +4248,19 @@ section h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     padding: 18px 4px;
 }
 
 .science-fridays-copy h2 {
-    text-align: left;
+    text-align: center;
     margin-bottom: 14px;
 }
 
 .science-fridays-copy h2::after {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .science-fridays-copy > p:last-child {
