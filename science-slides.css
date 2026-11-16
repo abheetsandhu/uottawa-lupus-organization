@@ -188,3 +188,18 @@
     .sf-copy h3, .sf-archive-week-copy h5 { font-size: 25px; }
     .sf-dots button { width: 16px; }
 }
+
+/* Original bilingual November editions. */
+.sf-new-edition { margin: 48px auto; max-width: 900px; }
+.sf-new-edition .science-series-heading { text-align: center; margin-bottom: 24px; }
+.sf-pdf-slider { max-width: 600px; }
+.sf-pdf-slider .sf-pdf-slide.is-active { display: block; padding: 0; }
+.sf-pdf-slide img { display: block; width: 100%; height: auto; }
+.sf-pdf-count { color: #6f6377; font-size: 15px; }
+.sf-transcript, .sf-previous-feature { max-width: 1120px; margin: 24px auto; padding: 20px; border: 1px solid #e9e1ed; border-radius: 16px; background: #fff; }
+.sf-transcript summary, .sf-previous-feature summary { color: #482458; font-weight: 600; cursor: pointer; }
+.sf-transcript section { padding: 24px 0; border-bottom: 1px solid #e9e1ed; overflow-wrap: anywhere; }
+.sf-transcript h4 { margin-bottom: 12px; color: #482458; }
+.sf-transcript p { color: #62576a; line-height: 1.7; }
+.sf-previous-feature > .sf-slider { margin-bottom: 0; }
+@media (max-width: 600px) { .sf-new-edition { margin: 32px auto; } .sf-transcript, .sf-previous-feature { padding: 16px; } }

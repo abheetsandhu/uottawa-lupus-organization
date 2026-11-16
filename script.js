@@ -158,6 +158,7 @@ document.querySelectorAll("[data-science-feature-slider]").forEach(function (sli
             const active = i === currentIndex;
             slide.classList.toggle("is-active", active);
             slide.setAttribute("aria-hidden", active ? "false" : "true");
+            slide.inert = !active;
         });
 
         dots.forEach(function (dot, i) {
